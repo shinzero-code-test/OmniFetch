@@ -1,6 +1,5 @@
 package com.exapps.omnifetch.ui.screens.home
 
-import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import androidx.compose.animation.AnimatedVisibility
