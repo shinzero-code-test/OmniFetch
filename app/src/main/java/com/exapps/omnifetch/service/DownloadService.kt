@@ -77,7 +77,7 @@ class DownloadService : Service() {
 
                 var lastProgress = 0f
 
-                dataSource.downloadVideo(url, formatId, outputFile) { progress, etaInSeconds ->
+                dataSource.downloadVideo(url, formatId, outputFile) { progress, etaInSeconds, _ ->
                     if (progress - lastProgress >= 1f || progress >= 100f) {
                         lastProgress = progress
                         val eta = if (etaInSeconds > 0) "${etaInSeconds}s" else ""

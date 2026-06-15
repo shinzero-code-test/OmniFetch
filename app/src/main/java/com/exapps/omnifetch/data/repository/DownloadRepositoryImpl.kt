@@ -71,7 +71,7 @@ class DownloadRepositoryImpl @Inject constructor(
             var lastProgress = 0f
 
             withContext(Dispatchers.IO) {
-                dataSource.downloadVideo(url, formatId, outputFile) { progress, etaInSeconds ->
+                dataSource.downloadVideo(url, formatId, outputFile) { progress, etaInSeconds, _ ->
                     if (progress - lastProgress >= 1f || progress >= 100f) {
                         lastProgress = progress
                         val eta = if (etaInSeconds > 0) "${etaInSeconds}s" else ""

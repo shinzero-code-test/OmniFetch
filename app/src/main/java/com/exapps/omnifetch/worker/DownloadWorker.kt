@@ -34,7 +34,7 @@ class DownloadWorker @AssistedInject constructor(
             val safeName = title.replace(Regex("[^a-zA-Z0-9._\\- ]"), "_").take(100)
             val outputFile = File(downloadDir, "$safeName.$ext")
 
-            dataSource.downloadVideo(url, formatId, outputFile) { progress, etaInSeconds ->
+            dataSource.downloadVideo(url, formatId, outputFile) { progress, _, _ ->
                 setProgressAsync(Data.Builder().putFloat("progress", progress).build())
             }
 
