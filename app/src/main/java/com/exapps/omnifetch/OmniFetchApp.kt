@@ -7,7 +7,7 @@ import android.os.Build
 import android.util.Log
 import com.yausername.youtubedl_android.YoutubeDL
 import com.yausername.youtubedl_android.YoutubeDLException
-import com.yausername.youtubedl_android.FFmpeg
+import com.yausername.ffmpeg.FFmpeg
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
